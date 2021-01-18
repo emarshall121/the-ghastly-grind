@@ -9,3 +9,4 @@ This project gave me starter code that included CSS, HTML, and README files. I u
 <b>Screenshots</b><br>
 
 <b>Links</b><br>
+<a href="https://emarshall121.github.io/the-ghastly-grind/">Deployed Application</a>

@@ -1,16 +1,29 @@
 // Variables
-var tasks = {
-    '8': '',
-    '9':'',
-    '10':'',
-    '11':'',
-    '12':'',
-    '1':'',
-    '2':'',
-    '3':'',
-    '4':'',
-    '5':''
-};
+var now = dayjs().hour()
+
+// Variable to hold the hours and events and reload any tasks saved in local storage
+var tasks = ["", "", "", "", "", "", "", "",]
+    if (localStorage.getItem("tasks")){
+        tasks = JSON.parse(localStorage.getItem("tasks"))
+    }
+
+// Saving items in localStorage
+localStorage.setItem("tasks", JSON.stringify(tasks))
+
+// Retrieve from localStorage
+var mySavedTasks = JSON.parse(localStorage.getItem("tasks"));
+mySavedTasks.forEach( function(element, index) {
+document.getElementById(index+"textarea").value = element
+})
+
+// Save task to localStorage when save button is clicked
+$(".saveBtn").click(function(event){
+    var buttonId = event.currentTarget.id
+    var newTask = document.getElementById(buttonId[0] + "textarea").value
+    var taskNumber = parseInt(buttonId[0]);
+    tasks[taskNumber]=newTask;
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+})
 
 // This creates the current day and date in the heading
 $('#currentDay').text("Today is: " + moment().format('dddd') + ", " + moment().format('MMMM Do YYYY'));
@@ -32,14 +45,26 @@ $(".description").on("click", "p", function() {
     textInput.trigger("focus");
   });
 
-// Saving tasks to localStorage by clicking save button
-    var saveTasks = function() {
-        localStorage.setItem("tasks", JSON.stringify(tasks));
-    };
+// Check each block and compare current time to agenda time
+$(".time-block").each(function () {
+    var agendaHour = $(this).attr("id");
 
-// Save task content when save button is clicked
-$(".saveBtn").on("click", function() {
-    tasks = JSON.parse(localStorage.setItem('tasks'));
-    console.log(tasks);
-    // saveTasks();
-  });
+    //color code based on past, present, future
+    if (agendaHour < now) {
+    $(this).addClass("past");
+    $(this).removeClass("present");
+    $(this).removeClass("future");
+    }
+    
+    else if (agendaHour == now) {
+    $(this).removeClass("past");
+    $(this).addClass("present");
+    $(this).removeClass("future");
+    }
+    
+    else {
+    $(this).removeClass("past");
+    $(this).removeClass("present");
+    $(this).addClass("future");
+    }
+})

@@ -28,96 +28,98 @@
     <!-- Header with title and day/date -->
     <header class="jumbotron bg-warning">
       <h1 class="display-3 text-center">The Ghastly Grind</h1>
-      <p class="lead text-center">A calendar app for managing your work day drudgery</p>
+      <p class="lead text-center">A simple calendar app for managing your work day drudgery</p>
       <p id="currentDay" class="lead text-center font-weight-bold"></p>
     </header>
     <div class="container">
+
       <!-- Timeblocks go here -->
-      <div class="row time-block">
+      <div id="8" class="row time-block">
         <div class="col-md-1 hour">
           8AM
         </div>
-        <textarea class="col-md-10 description">
+        <textarea id="0textarea" class="col-md-10 description">
         </textarea>
-        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+        <button id="0btn" class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
       </div>
 
-      <div class="row time-block">
+      <div id="9" class="row time-block">
         <div class="col-md-1 hour">
           9AM
         </div>
-        <textarea class="col-md-10 description">
+        <textarea id="1textarea" class="col-md-10 description">
         </textarea>
-        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+        <button id="1btn" class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
       </div>
 
-      <div class="row time-block">
+      <div id="10" class="row time-block">
         <div class="col-md-1 hour">
           10AM
         </div>
-        <textarea class="col-md-10 description">
+        <textarea id="2textarea" class="col-md-10 description">
         </textarea>
-        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+        <button id="2btn" class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
       </div>
 
-      <div class="row time-block">
+      <div id="11" class="row time-block">
         <div class="col-md-1 hour">
           11AM
         </div>
-        <textarea class="col-md-10 description">
+        <textarea id="3textarea" class="col-md-10 description">
         </textarea>
-        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+        <button id="3btn" class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
       </div>
 
-      <div class="row time-block">
+      <div id="12" class="row time-block">
         <div class="col-md-1 hour">
           12PM
         </div>
-        <textarea class="col-md-10 description">
+        <textarea id="4textarea" class="col-md-10 description">
         </textarea>
-        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+        <button id="4btn" class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
       </div>
 
-      <div class="row time-block">
+      <div id="13" class="row time-block">
         <div class="col-md-1 hour">
           1PM
         </div>
-        <textarea class="col-md-10 description">
+        <textarea id="5textarea" class="col-md-10 description">
         </textarea>
-        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+        <button id="5btn" class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
       </div>
 
-      <div class="row time-block">
+      <div id="14" class="row time-block">
         <div class="col-md-1 hour">
           2PM
         </div>
-        <textarea class="col-md-10 description">
+        <textarea id="6textarea" class="col-md-10 description">
         </textarea>
-        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+        <button id="6btn" class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
       </div>
 
-      <div class="row time-block">
+      <div id="15" class="row time-block">
         <div class="col-md-1 hour">
           3PM
         </div>
-        <textarea class="col-md-10 description">
+        <textarea id="7textarea" class="col-md-10 description">
         </textarea>
-        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+        <button id="7btn" class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
       </div>
 
-      <div class="row time-block">
+      <div id="16" class="row time-block">
         <div class="col-md-1 hour">
           4PM
         </div>
-        <textarea class="col-md-10 description">
+        <textarea id="8textarea" class="col-md-10 description">
         </textarea>
-        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+        <button id="8btn" class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
       </div>
     </div>
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.3/dayjs.min.js" integrity="sha512-0fcCRl828lBlrSCa8QJY51mtNqTcHxabaXVLPgw/jPA5Nutujh6CbTdDgRzl9aSPYW/uuE7c4SffFUQFBAy6lg==" crossorigin="anonymous"></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
